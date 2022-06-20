@@ -1,0 +1,159 @@
+@font-face {
+  font-family: Montserrat-t;
+  src: url(./fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: Montserrat-l;
+  src: url(./fonts/Montserrat-Light.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat-l, sans-serif, "Times New Roman", Times, serif;
+  filter: brightness(95%);
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  width: 916px;
+  margin: 35px auto;
+  color: white;
+  background-color: #333333;
+}
+
+/* Navigation */
+
+nav {
+  background-color: #1f464d;
+}
+
+.navigationSeznam {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 12%;
+  padding: 15px 0;
+}
+
+.navigationSeznam > a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+  margin-left: 15px;
+}
+
+/* Main Section */
+
+section {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  justify-content: space-between;
+  margin: 12%;
+}
+
+/* Left side */
+
+.about--name {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: Montserrat-t;
+}
+
+.about--text {
+  margin: 25px 0;
+  line-height: 100%;
+}
+
+.about--buttom {
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #3697a7;
+  border: none;
+  color: white;
+  width: 200px;
+  padding: 5px 0;
+}
+
+/* Right side */
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about--img {
+  margin-left: auto;
+}
+
+.picture-of-me {
+  width: 225px;
+  height: 300px;
+}
+
+/* article */
+
+article {
+  margin: 12%;
+}
+
+.article--name {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: Montserrat-t;
+  margin-bottom: 15px;
+}
+
+.boxs {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+/* img */
+.boxs > .box > img {
+  width: 220px;
+  height: 150px;
+  outline: 0.5px solid white;
+  outline-offset: -10px;
+}
+/* text under img */
+
+.box--text {
+  width: 220px;
+  height: 100px;
+  color: white;
+  background-color: #3697a7;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.box--text > h3 {
+  padding: 10px 9px;
+  font-family: Montserrat-t;
+  font-size: 13.5px;
+  text-transform: uppercase;
+}
+.box--text > p {
+  font-size: 11px;
+  padding: 5px 10px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+}
+
+footer > p {
+  padding-bottom: 25px;
+}
