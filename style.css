@@ -11,35 +11,37 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Montserrat-l, sans-serif, "Times New Roman", Times, serif;
+  font-family: Montserrat-l, "Times New Roman", Times, serif;
   filter: brightness(95%);
 }
 
-html {
-  background-color: white;
-}
-
 body {
-  max-width: 916px;
-  margin: 35px auto;
   color: white;
   background-color: #333333;
+}
+
+/* content size */
+.jjApp {
+  max-width: 916px;
+  margin: 0 auto;
 }
 
 /* Navigation */
 
 nav {
   background-color: #1f464d;
+  width: 100%;
 }
 
-.navigationSeznam {
+.navigationList {
+  max-width: 916px;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 12%;
+  justify-content: end;
+  margin: 0 auto 0 12%;
   padding: 15px 0;
 }
 
-.navigationSeznam > a {
+.navigationList a {
   text-decoration: none;
   color: white;
   font-weight: normal;
@@ -60,15 +62,15 @@ section {
 .about--name {
   font-weight: 100;
   text-transform: uppercase;
-  font-family: Montserrat-t;
+  font-family: Montserrat-t, "Times New Roman", Times, serif;
 }
 
 .about--text {
   margin: 25px 0;
-  line-height: 100%;
+  line-height: 1.5;
 }
 
-.about--buttom {
+.about--button {
   text-transform: uppercase;
   cursor: pointer;
   background-color: #3697a7;
@@ -76,6 +78,10 @@ section {
   color: white;
   width: 200px;
   padding: 5px 0;
+}
+
+.about--button:hover {
+  filter: brightness(110%);
 }
 
 /* Right side */
@@ -103,7 +109,7 @@ article {
 .article--name {
   font-weight: 100;
   text-transform: uppercase;
-  font-family: Montserrat-t;
+  font-family: Montserrat-t, "Times New Roman", Times, serif;
   margin-bottom: 15px;
 }
 
@@ -116,8 +122,13 @@ article {
   display: flex;
   flex-direction: column;
 }
+
+.box:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
 /* img */
-.boxs > .box > img {
+.box img {
   width: 220px;
   height: 150px;
   outline: 0.5px solid white;
@@ -128,21 +139,19 @@ article {
 .box--text {
   width: 220px;
   height: 100px;
-  color: white;
   background-color: #3697a7;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 }
 
-.box--text > h3 {
+.box--text h3 {
   padding: 10px 9px;
-  font-family: Montserrat-t;
+  font-family: Montserrat-t, "Times New Roman", Times, serif;
   font-size: 13.5px;
   text-transform: uppercase;
 }
-.box--text > p {
+.box--text p {
   font-size: 11px;
   padding: 5px 10px;
 }
@@ -153,31 +162,55 @@ footer {
   text-align: center;
 }
 
-footer > p {
+footer p {
   padding-bottom: 25px;
 }
 
 /********* Media queries *************/
 
+@media only screen and (max-width: 1516px) {
+  .navigationList {
+    margin-right: 24%;
+  }
+}
+@media only screen and (max-width: 1316px) {
+  .navigationList {
+    margin-right: 20%;
+  }
+}
+@media only screen and (max-width: 1016px) {
+  .navigationList {
+    margin-right: 16%;
+  }
+}
 @media only screen and (max-width: 916px) {
+  .navigationList {
+    margin-right: 8%;
+  }
   section,
   article {
     margin: 12% 8%;
   }
 }
 @media only screen and (max-width: 830px) {
+  .navigationList {
+    margin-right: 4%;
+  }
   section,
   article {
     margin: 12% 4%;
   }
 }
 @media only screen and (max-width: 750px) {
+  .navigationList {
+    margin-right: 4%;
+  }
   section,
   article {
     margin: 10% 2%;
   }
 
-  .boxs > .box > img,
+  .box img,
   .box--text {
     width: 200px;
   }
@@ -188,11 +221,11 @@ footer > p {
     margin: 0 auto;
   }
 
-  .navigationSeznam {
+  .navigationList {
     justify-content: center;
-    margin-right: 0;
+    margin: 0;
   }
-  .navigationSeznam > a {
+  .navigationList a {
     margin: 0 15px;
   }
 
@@ -215,7 +248,7 @@ footer > p {
     text-align: center;
   }
 
-  .boxs > .box > img {
+  .box img {
     width: 100%;
     height: 250px;
     margin: 25px 1% 0;
@@ -226,10 +259,10 @@ footer > p {
     font-size: 18px;
     margin: 0 1%;
   }
-  .box--text > h3 {
+  .box--text h3 {
     font-size: 18px;
   }
-  .box--text > p {
+  .box--text p {
     font-size: 14px;
   }
 }
@@ -247,7 +280,7 @@ footer > p {
     text-align: center;
   }
 
-  .about--buttom {
+  .about--button {
     margin: 0 auto;
   }
 
